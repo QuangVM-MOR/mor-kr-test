@@ -1,0 +1,53 @@
+.button {
+  display: inline-block;
+  width: 140px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: white;
+  border-radius: 4px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  text-align: center;
+  cursor: pointer !important;
+  position: relative;
+  overflow: hidden;
+  &.blue {
+    background-color: var(--color-blue);
+    .button-animation:after {
+      animation: anim-out-pseudo 1.3s infinite;
+    }
+  }
+  &.yellow {
+    background-color: #ffc400;
+    .button-animation:after {
+      animation: home-anim-out-pseudo 1.3s infinite;
+    }
+  }
+  .button-animation {
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    -webkit-animation: anim-out 1.3s infinite;
+    animation: anim-out 1.3s infinite;
+  }
+  .button-animation:before {
+    position: relative;
+    content: "";
+    display: block;
+    margin-top: 100%;
+  }
+  .button-animation:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+  }
+}

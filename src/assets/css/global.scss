@@ -25,7 +25,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 a {
@@ -37,4 +38,28 @@ svg {
 }
 ul {
   list-style-type: none;
+}
+@keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 120%;
+  }
+}
+@keyframes anim-out-pseudo {
+  0% {
+    background: #0066e9;
+  }
+  100% {
+    background: transparent;
+  }
+}
+@keyframes home-anim-out-pseudo {
+  0% {
+    background: #edb600;
+  }
+  100% {
+    background: transparent;
+  }
 }
