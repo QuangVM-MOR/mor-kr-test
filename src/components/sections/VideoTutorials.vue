@@ -11,7 +11,14 @@
           preload="auto"
           :poster="videoActive.poster"
           :src="videoActive.src"
+          @play="handleControlPlay"
+          @pause="handleControlPause"
         />
+        <template v-if="isPaused">
+          <div class="play-video-container">
+            <PlayVideo :width="74" :height="74" />
+          </div>
+        </template>
       </div>
       <VideoPlayList
         :videoIdActive="videoActive.id"
@@ -24,16 +31,19 @@
 </template>
 <script>
 import VideoPlayList from "../items/VideoPlayList.vue";
+import PlayVideo from "../icons/PlayVideo.vue";
 import { videoTutorials } from "../../_mock_";
 
 export default {
   components: {
     VideoPlayList,
+    PlayVideo,
   },
   data: () => ({
     videoIdPlaying: -1,
     videoList: structuredClone(videoTutorials),
     videoActive: structuredClone(videoTutorials[0]),
+    isPaused: true,
   }),
   methods: {
     handlePlay({ id, data }) {
@@ -51,6 +61,12 @@ export default {
     },
     pauseVideo() {
       this.$refs.videoRef.pause();
+    },
+    handleControlPlay() {
+      this.isPaused = false;
+    },
+    handleControlPause() {
+      this.isPaused = true;
     },
   },
 };

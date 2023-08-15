@@ -21,7 +21,11 @@
     display: flex;
     & .video {
       width: 930px;
-      background-color: #ffffff;
+      background-color: #000000;
+      position: relative;
+      video {
+        height: 524px;
+      }
     }
     & .video-playlist {
       flex: 1;

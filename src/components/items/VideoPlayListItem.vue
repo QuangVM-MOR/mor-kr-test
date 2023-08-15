@@ -52,12 +52,6 @@ export default {
     & img {
       border-radius: 4px;
     }
-    & .play-video-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
   & .name {
     font-size: 16px;
