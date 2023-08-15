@@ -48,6 +48,7 @@ video {
   height: 100%;
 }
 img {
+  vertical-align: middle;
   width: 100%;
 }
 .scrollbar {
@@ -104,4 +105,46 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@keyframes showImg0 {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes showImg1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes showImg2 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes showImg3 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes showImg4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

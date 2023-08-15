@@ -1,0 +1,19 @@
+.tab-wrap {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  .tab {
+    width: 130px;
+    height: 44px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+    font-size: 16px;
+    &.active {
+      color: white;
+      background-color: var(--color-blue);
+    }
+  }
+}

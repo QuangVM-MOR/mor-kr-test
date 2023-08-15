@@ -3,6 +3,7 @@
     <Header />
     <VideoMedia />
     <FreeProduct />
+    <ShowCase />
     <Card3D />
     <VideoTutorials />
     <Footer />
@@ -15,6 +16,7 @@ import VideoTutorials from "./components/sections/VideoTutorials.vue";
 import Footer from "./components/sections/Footer.vue";
 import FreeProduct from "./components/sections/FreeProduct.vue";
 import Card3D from "./components/sections/Card3D.vue";
+import ShowCase from "./components/sections/ShowCase.vue";
 export default {
   components: {
     Header,
@@ -23,6 +25,7 @@ export default {
     Footer,
     FreeProduct,
     Card3D,
+    ShowCase,
   },
 };
 </script>

@@ -3,11 +3,11 @@ import poster2 from "../assets/images/playlistitem-poster2.jpg";
 import poster3 from "../assets/images/playlistitem-poster3.jpg";
 import poster4 from "../assets/images/playlistitem-poster4.jpg";
 import poster5 from "../assets/images/playlistitem-poster5.jpg";
-import videoTutorial1 from "../assets/mp4/video-tutorial-1.mp4";
-import videoTutorial3 from "../assets/mp4/video-tutorial-3.mp4";
 import shareSvg from "../assets/images/svg-share.svg";
 import boxSvg from "../assets/images/svg-box.svg";
 import globalSvg from "../assets/images/svg-global.svg";
+import imgShowCase1 from "../assets/images/showcase-1.png";
+import imgShowCase2 from "../assets/images/showcase-2.jpg";
 
 export const videoTutorials = [
   {
@@ -113,3 +113,135 @@ export const freeProducts = [
   },
 ];
 
+export const dataShowCase = [
+  {
+    title: "畅享创意",
+    animation: "showImg0",
+    listShowcase: [
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase2,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+    ],
+  },
+  {
+    title: "畅享创意",
+    animation: "showImg1",
+    listShowcase: [
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+    ],
+  },
+  {
+    title: "畅享创意",
+    animation: "showImg2",
+    listShowcase: [
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+    ],
+  },
+  {
+    title: "畅享创意",
+    animation: "showImg3",
+    listShowcase: [
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+    ],
+  },
+  {
+    title: "畅享创意",
+    animation: "showImg4",
+    listShowcase: [
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+      {
+        image: imgShowCase1,
+        caption: "森林狂想曲",
+      },
+    ],
+  },
+];
