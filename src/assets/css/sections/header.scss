@@ -48,6 +48,9 @@
     a.selected {
       color: var(--color-blue);
     }
+    a:not(.cooperation) {
+      margin-top: 1px;
+    }
     a:hover:not(.cooperation) {
       color: var(--color-blue);
     }
@@ -69,12 +72,19 @@
   align-items: center;
   .vip {
     margin-right: 25px;
+    margin-top: 6px;
+    img {
+      height: 18px;
+      width: auto;
+      margin-bottom: 5px;
+    }
     a {
       display: flex;
       flex-direction: column;
       align-items: center;
       font-weight: bold;
       p {
+        margin-top: 5px;
         font-size: 12px;
       }
     }
@@ -82,6 +92,9 @@
   .register {
     span.b {
       cursor: pointer;
+      &:hover {
+        color: var(--color-blue);
+      }
     }
     span {
       padding: 0 10px;
