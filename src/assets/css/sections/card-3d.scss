@@ -1,0 +1,9 @@
+.card-3d {
+  padding: 85px 0 57px 0;
+  background-color: #ffffff;
+  .list-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+  }
+}
