@@ -38,3 +38,25 @@ svg {
 ul {
   list-style-type: none;
 }
+video {
+  border: none;
+  outline: none;
+}
+img {
+  width: 100%;
+}
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #d2d9de;
+  }
+}

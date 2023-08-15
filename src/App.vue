@@ -1,13 +1,16 @@
 <template>
   <div>
-    <Header />
+    <VideoTutorials />
+    <Footer />
   </div>
 </template>
 <script>
-import Header from "./components/sections/Header.vue";
+import VideoTutorials from "./components/sections/VideoTutorials.vue";
+import Footer from "./components/sections/Footer.vue";
 export default {
   components: {
-    Header,
+    Footer,
+    VideoTutorials,
   },
 };
 </script>
