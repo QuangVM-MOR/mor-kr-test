@@ -18,6 +18,12 @@
     .button-animation:after {
       animation: anim-out-pseudo 1.3s infinite;
     }
+    &.border {
+      background-color: #0066e9;
+      border: 1px solid rgb(64, 169, 255);
+      text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+      box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+    }
   }
   &.yellow {
     background-color: #ffc400;
@@ -26,6 +32,7 @@
     }
   }
   .button-animation {
+    pointer-events: none;
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     position: absolute;
@@ -36,12 +43,14 @@
     animation: anim-out 1.3s infinite;
   }
   .button-animation:before {
+    pointer-events: none;
     position: relative;
     content: "";
     display: block;
     margin-top: 100%;
   }
   .button-animation:after {
+    pointer-events: none;
     content: "";
     position: absolute;
     top: 0;

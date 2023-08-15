@@ -5,6 +5,20 @@
       <h1 class="title">人人都会用的虚拟场景交付平台</h1>
       <p class="sub-title">2.6版本全新升级</p>
       <FormSignupTop />
+      <div class="download">
+        <ButtonCommon
+          text="下载客户端"
+          type="yellow"
+          :animation="true"
+          :border="true"
+        />
+        <ButtonCommon
+          text="网页布展"
+          type="yellow"
+          :border="true"
+          :animation="true"
+        />
+      </div>
     </div>
     <div class="triangle"></div>
     <video autoplay loop muted preload="auto" class="center" ref="video">
@@ -12,17 +26,30 @@
         src="https://cloud.chan3d.com/cdn/website/video/lead-30_1.mp4"
         type="video/mp4"
       />
+      <source
+        src="https://cloud.chan3d.com/cdn/website/video/lead-btrate1.mp4"
+        media="all and (max-width: 767px)"
+        type="video/mp4"
+      />
     </video>
+    <img
+      src="../../assets/images/scrolldown.gif"
+      alt="scrolldown"
+      class="scrolldown"
+    />
   </div>
 </template>
 
 <script>
 import FormSignupTop from "../forms/FormSignupTop.vue";
 import PopupVideoVue from "../popups/PopupVideo.vue";
+import ButtonCommon from "../ui/ButtonCommon.vue";
+
 export default {
   components: {
     PopupVideoVue,
     FormSignupTop,
+    ButtonCommon,
   },
   data() {
     return {

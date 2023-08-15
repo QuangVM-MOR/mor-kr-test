@@ -1,7 +1,7 @@
 <template>
-  <div class="button" :class="[type]" @click="handleClick">
+  <div class="button" :class="[type, border && 'border']" @click="handleClick">
     <span>{{ text }}</span>
-    <div class="button-animation"></div>
+    <div class="button-animation" v-if="animation"></div>
   </div>
 </template>
 <script>
@@ -11,16 +11,25 @@ export default {
       type: String,
       required: true,
     },
-    handleClick: {
-      type: Function,
-      required: true,
+    animation: {
+      type: Boolean,
+      default: false,
+    },
+    border: {
+      type: Boolean,
+      default: false,
     },
     type: {
       type: String,
-      default: "yellow",
+      default: "blue",
       validator: (value) => {
         return ["blue", "yellow"].includes(value);
       },
+    },
+  },
+  methods: {
+    handleClick() {
+      this.$emit("click");
     },
   },
 };
