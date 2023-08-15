@@ -1,6 +1,6 @@
 <template>
   <div class="video-tutorials">
-    <div class="video-tutorials__title">展厅布展视频教程大全</div>
+    <h2 class="video-tutorials__title">展厅布展视频教程大全</h2>
     <div class="video-tutorials__description">新手小白晋级设计达人</div>
     <div class="video-box">
       <div class="video">
