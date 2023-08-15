@@ -1,12 +1,12 @@
 <template>
-  <li class="video-playlist-item">
+  <li class="video-playlist-item" @click="handlePlay">
     <div class="video-playlist-item__poster">
       <img :src="video.thumbnail" alt="Thumbnail" />
       <div class="play-video-container">
         <PlayVideo :isPaused="isPaused" />
       </div>
     </div>
-    <div class="name">
+    <div :class="['name', isActive && 'active']">
       {{ video.name }}
     </div>
   </li>
@@ -23,8 +23,20 @@ export default {
       type: Boolean,
       required: true,
     },
+    isActive: {
+      type: Boolean,
+      required: true,
+    },
   },
   components: { PlayVideo },
+  methods: {
+    handlePlay() {
+      this.$emit("onPlay", {
+        id: this.video.id,
+        data: this.video,
+      });
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -49,6 +61,9 @@ export default {
   }
   & .name {
     font-size: 16px;
+    &.active {
+      color: #0f7bff;
+    }
   }
 }
 </style>

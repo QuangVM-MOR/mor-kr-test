@@ -5,14 +5,20 @@
     <div class="video-box">
       <div class="video">
         <video
-          loop=""
-          playsinline=""
+          controls
+          autoplay
+          ref="videoRef"
           preload="auto"
-          controls=""
+          :poster="videoActive.poster"
           :src="videoActive.src"
         />
       </div>
-      <VideoPlayList :videoIdPlaying="videoIdPlaying" :videoList="videoList" />
+      <VideoPlayList
+        :videoIdActive="videoActive.id"
+        :videoIdPlaying="videoIdPlaying"
+        :videoList="videoList"
+        @onPlay="handlePlay"
+      />
     </div>
   </div>
 </template>
@@ -29,6 +35,24 @@ export default {
     videoList: structuredClone(videoTutorials),
     videoActive: structuredClone(videoTutorials[0]),
   }),
+  methods: {
+    handlePlay({ id, data }) {
+      if (this.videoIdPlaying !== id) {
+        this.videoIdPlaying = id;
+        this.playVideo();
+      } else {
+        this.videoIdPlaying = -1;
+        this.pauseVideo();
+      }
+      this.videoActive = data;
+    },
+    playVideo() {
+      this.$refs.videoRef.play();
+    },
+    pauseVideo() {
+      this.$refs.videoRef.pause();
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

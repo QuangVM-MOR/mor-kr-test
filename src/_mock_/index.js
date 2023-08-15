@@ -3,6 +3,8 @@ import poster2 from "../assets/images/playlistitem-poster2.jpg";
 import poster3 from "../assets/images/playlistitem-poster3.jpg";
 import poster4 from "../assets/images/playlistitem-poster4.jpg";
 import poster5 from "../assets/images/playlistitem-poster5.jpg";
+import videoTutorial1 from "../assets/mp4/video-tutorial-1.mp4";
+import videoTutorial3 from "../assets/mp4/video-tutorial-3.mp4";
 
 export const videoTutorials = [
   {
@@ -10,6 +12,7 @@ export const videoTutorials = [
     name: "在线布展教程",
     poster: poster1,
     thumbnail: poster1,
+    src: videoTutorial1,
   },
   {
     id: 2,
@@ -22,6 +25,7 @@ export const videoTutorials = [
     name: "导入教程",
     poster: poster3,
     thumbnail: poster3,
+    src: videoTutorial3,
   },
   {
     id: 4,

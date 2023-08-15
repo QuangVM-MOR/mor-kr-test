@@ -8,8 +8,10 @@
       <VideoPlayListItem
         v-for="video in videoList"
         :isPaused="video.id !== videoIdPlaying"
+        :isActive="video.id === videoIdActive"
         :key="video.id"
         :video="video"
+        @onPlay="handlePlay"
       />
     </ul>
   </div>
@@ -27,9 +29,18 @@ export default {
       type: Number,
       required: true,
     },
+    videoIdActive: {
+      type: Number,
+      required: true,
+    },
   },
   components: {
     VideoPlayListItem,
+  },
+  methods: {
+    handlePlay({ id, data }) {
+      this.$emit("onPlay", { id, data });
+    },
   },
 };
 </script>
