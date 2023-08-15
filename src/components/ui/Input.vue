@@ -2,6 +2,7 @@
   <div
     class="wrap-input"
     :class="[!!errorMessage.length && 'error', isVerifyInput && 'verify-code']"
+    :style="`width:${width}px`"
   >
     <input
       :type="type"
@@ -57,6 +58,10 @@ export default {
     isWaitingVerifyCode: {
       type: Boolean,
       default: false,
+    },
+    width: {
+      type: String,
+      default: "212",
     },
   },
   methods: {

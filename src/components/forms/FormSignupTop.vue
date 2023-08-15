@@ -10,9 +10,10 @@
     <Input
       name="code"
       placeholder="输入验证码"
+      verifyKey="phone"
+      width="232"
       :value="code"
       :errorMessage="errorVerifyCode"
-      verifyKey="phone"
       :isVerifyInput="true"
       :verifyText="verifyText"
       :isWaitingVerifyCode="isWaitingVerify"
@@ -26,11 +27,7 @@
       :errorMessage="errorPassword"
       @input="handleInput"
     />
-    <ButtonCommon
-      text="立即注册"
-      :border="true"
-      @click="handleSubmitForm"
-    />
+    <ButtonCommon text="立即注册" :border="true" @click="handleSubmitForm" />
   </form>
 </template>
 <script>
