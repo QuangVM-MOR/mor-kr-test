@@ -156,3 +156,12 @@ img {
     width: 100%;
   }
 }
+[data-aos] {
+  transition-duration: 0.4s;
+}
+[data-aos="flip-left"] {
+  transform: perspective(2500px) rotateY(-100deg);
+}
+.flip-left {
+  transform: perspective(2500px) rotateY(0);
+}

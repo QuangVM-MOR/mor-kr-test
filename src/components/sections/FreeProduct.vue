@@ -8,7 +8,9 @@
           :product="product"
         />
       </div>
-      <div class="title">零成本快速展示您的空间设计</div>
+      <div class="title aos aos-toggle" data-aos="flip-left">
+        零成本快速展示您的空间设计
+      </div>
       <div class="sub-title">知了云展轻松呈现逼真的三维漫游效果</div>
     </div>
   </div>

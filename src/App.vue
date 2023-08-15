@@ -37,11 +37,13 @@ export default {
     const elements = document.getElementsByClassName("aos");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        const element = entry.target;
+        const classAnimation = element.getAttribute("data-aos");
+        const hasToggleAos = element.classList.contains("aos-toggle");
         if (entry.isIntersecting) {
-          const classAnimation = entry.target.getAttribute("data-aos");
-          if (classAnimation) {
-            entry.target.classList.add(classAnimation);
-          }
+          element.classList.add(classAnimation);
+        } else if (!entry.isIntersecting && hasToggleAos) {
+          element.classList.remove(classAnimation);
         }
       });
     });
