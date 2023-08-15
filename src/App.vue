@@ -2,6 +2,7 @@
   <div>
     <Header />
     <VideoMedia />
+    <WhoAreWe />
     <OurAdvantages />
     <Card3D />
     <VideoTutorials />
@@ -15,6 +16,7 @@ import VideoTutorials from "./components/sections/VideoTutorials.vue";
 import Footer from "./components/sections/Footer.vue";
 import Card3D from "./components/sections/Card3D.vue";
 import OurAdvantages from "./components/sections/OurAdvantages.vue";
+import WhoAreWe from "./components/sections/WhoAreWe.vue";
 export default {
   components: {
     Header,
@@ -23,6 +25,7 @@ export default {
     Footer,
     Card3D,
     OurAdvantages,
+    WhoAreWe,
   },
 };
 </script>
