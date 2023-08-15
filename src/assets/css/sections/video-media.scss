@@ -50,8 +50,8 @@ video {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   border-top: 230px solid transparent;
-  border-left: 1440px solid #f3f3f3;
-  border-right: 1440px solid #f3f3f3;
+  border-left: 1440px solid var(--color-bg);
+  border-right: 1440px solid var(--color-bg);
   z-index: 1;
 }
 .download {

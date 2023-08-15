@@ -1,0 +1,25 @@
+.card {
+  width: 400px;
+  height: 310px;
+  background-color: #ffffff;
+  padding: 55px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:hover img {
+    animation: fadeOut 1.2s linear infinite;
+  }
+  img {
+    width: 33px;
+    height: 36px;
+    margin-bottom: 29px;
+  }
+  .title {
+    font-size: 18px;
+    color: var(--color-gray-3);
+    margin-bottom: 29px;
+  }
+  .desc {
+    line-height: 28px;
+    color: var(--color-gray-6);
+  }
+}

@@ -7,6 +7,7 @@
   --color-blue: #0f7bff;
   --color-gray-3: #333333;
   --color-gray-6: #666666;
+  --color-bg: #f3f3f3;
 }
 body {
   font-size: 14px;
@@ -85,5 +86,15 @@ img {
   }
   100% {
     background: transparent;
+  }
+}
+@keyframes fadeOut {
+  from {
+    /* -webkit-transform: rotateY(0deg); */
+    /* transform: rotateY(0deg); */
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
