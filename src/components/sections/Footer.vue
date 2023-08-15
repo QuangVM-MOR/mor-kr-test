@@ -10,7 +10,7 @@
             <div class="item__children">
               <div v-for="child in item.children" :key="child.id">
                 <template v-if="child.type === 'text'">
-                  {{ child.name }}
+                  <a href="#">{{ child.name }}</a>
                 </template>
                 <template v-else-if="child.type === 'image'">
                   <img :src="child.url" />
