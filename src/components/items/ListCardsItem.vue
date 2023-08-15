@@ -37,7 +37,6 @@ export default {
   &__content {
     padding-right: 38px;
     & .name {
-      color: #333333;
       font-size: 22px;
       margin-bottom: 20px;
     }

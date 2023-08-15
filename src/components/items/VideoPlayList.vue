@@ -63,7 +63,6 @@ export default {
     align-items: flex-end;
     padding-right: 30px;
     .title {
-      color: #333333;
       font-size: 20px;
     }
     .more {
