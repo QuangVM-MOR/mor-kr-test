@@ -8,6 +8,10 @@ import boxSvg from "../assets/images/svg-box.svg";
 import globalSvg from "../assets/images/svg-global.svg";
 import imgShowCase1 from "../assets/images/showcase-1.png";
 import imgShowCase2 from "../assets/images/showcase-2.jpg";
+import ourAdvantage1 from "../assets/images/our-advantage-1.svg";
+import ourAdvantage2 from "../assets/images/our-advantage-2.svg";
+import ourAdvantage3 from "../assets/images/our-advantage-3.svg";
+import ourAdvantage4 from "../assets/images/our-advantage-4.svg";
 
 export const videoTutorials = [
   {
@@ -243,5 +247,34 @@ export const dataShowCase = [
         caption: "森林狂想曲",
       },
     ],
+  },
+];
+export const listAdvantages = [
+  {
+    id: 1,
+    name: "更低的交付成本",
+    description:
+      "无需招聘高工资程序员、通过强大的插件系统、轻松交付纯三维互动空间。",
+    icon: ourAdvantage1,
+  },
+  {
+    id: 2,
+    name: "丰富的交互功能",
+    description:
+      "提供内容丰富、形式多样的素材管理系统，内置材质修改、自动漫游、留言聊天、视频会议等在线交流工具。",
+    icon: ourAdvantage2,
+  },
+  {
+    id: 3,
+    name: "更短的交付周期",
+    description: "一小时将空间设计发布云端、纯三维网页漫游。",
+    icon: ourAdvantage3,
+  },
+  {
+    id: 4,
+    name: "更好的服务",
+    description:
+      "提供7*12小时技术服务、项目设计将指派本地合作设计公司实施交付。",
+    icon: ourAdvantage4,
   },
 ];
