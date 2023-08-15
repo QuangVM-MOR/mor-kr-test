@@ -1,10 +1,13 @@
 <template>
   <div class="video-tutorials">
-    <h2 class="video-tutorials__title">展厅布展视频教程大全</h2>
+    <h2 class="video-tutorials__title aos" data-aos="test">
+      展厅布展视频教程大全
+    </h2>
     <div class="video-tutorials__description">新手小白晋级设计达人</div>
     <div class="video-box">
       <div class="video">
         <video
+          class="aos"
           controls
           autoplay
           ref="videoRef"

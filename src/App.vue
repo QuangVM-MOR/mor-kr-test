@@ -33,6 +33,22 @@ export default {
     OurAdvantages,
     WhoAreWe,
   },
+  mounted() {
+    const elements = document.getElementsByClassName("aos");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const classAnimation = entry.target.getAttribute("data-aos");
+          if (classAnimation) {
+            entry.target.classList.add(classAnimation);
+          }
+        }
+      });
+    });
+    Array.from(elements).forEach((element) => {
+      observer.observe(element);
+    });
+  },
 };
 </script>
 <style lang="scss"></style>
