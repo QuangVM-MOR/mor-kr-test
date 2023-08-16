@@ -2,14 +2,14 @@
   <div>
     <LuncherButton />
     <Header />
-    <VideoMedia v-if="useDesktop"/>
-    <VideoMediaMobile v-if="!useDesktop"/>
+    <VideoMedia v-if="useDesktop" />
+    <VideoMediaMobile v-if="!useDesktop" />
     <FreeProduct />
     <ShowCase />
     <WhoAreWe />
     <OurAdvantages />
     <Card3D />
-    <VideoTutorials v-if="useDesktop" />
+    <VideoTutorials />
     <Footer />
   </div>
 </template>
@@ -28,7 +28,7 @@ import LuncherButton from "./components/ui/LuncherButton.vue";
 import breakpointMixin from "./mixins/breakpoint";
 import htmlFontMixin from "./mixins/htmlFont";
 export default {
-  mixins: [breakpointMixin,htmlFontMixin],
+  mixins: [breakpointMixin, htmlFontMixin],
   components: {
     Header,
     VideoMedia,
@@ -43,7 +43,22 @@ export default {
     VideoMediaMobile,
   },
   mounted() {
-    this.toggleAnimation();
+    const elements = document.getElementsByClassName("aos");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const element = entry.target;
+        const classAnimation = element.getAttribute("data-aos");
+        const hasToggleAos = element.classList.contains("aos-toggle");
+        if (entry.isIntersecting) {
+          element.classList.add(classAnimation);
+        } else if (!entry.isIntersecting && hasToggleAos) {
+          element.classList.remove(classAnimation);
+        }
+      });
+    });
+    Array.from(elements).forEach((element) => {
+      observer.observe(element);
+    });
   },
   computed: {
     useDesktop() {

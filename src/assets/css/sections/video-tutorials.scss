@@ -1,6 +1,9 @@
 .video-tutorials {
   background-color: #0f7bff;
   padding: 70px 0px 110px 0;
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
   &__title {
     font-size: 28px;
     color: #ffffff;

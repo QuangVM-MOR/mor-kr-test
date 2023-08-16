@@ -32,6 +32,16 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  @media screen and (max-width: 1023px) {
+    width: calc(50% - 20px);
+    gap: 0.4rem;
+  }
+  @media screen and (max-width: 767px) {
+    gap: 0.3rem;
+  }
+  @media screen and (max-width: 599px) {
+    width: 100%;
+  }
   &:hover {
     & .border.top,
     & .border.bottom {
@@ -43,12 +53,29 @@ export default {
     }
     & .name::after {
       width: 100px;
+      @media screen and (max-width: 1023px) {
+        width: 40px;
+      }
     }
   }
   & img {
     width: 36px;
+    @media screen and (max-width: 1023px) {
+      width: 0.56rem;
+    }
+    @media screen and (max-width: 754px) {
+      width: 0.44rem;
+    }
   }
   & .name {
+    @media screen and (max-width: 1023px) {
+      font-size: 0.26rem;
+      font-weight: 500;
+      margin-bottom: 0.1rem;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 0.2rem;
+    }
     font-size: 16px;
     position: relative;
     &::after {
@@ -67,35 +94,59 @@ export default {
   & .description {
     color: #666666;
     text-align: justify;
+    @media screen and (max-width: 1023px) {
+      font-size: 0.26rem;
+      font-weight: 500;
+      font-size: 0.22rem;
+      line-height: 0.28rem;
+      font-weight: 500;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 0.2rem;
+    }
   }
   .border {
     position: absolute;
     background-color: #0f7bff;
     transition: 0.3s;
-
+    @media screen and (max-width: 1023px) {
+      background-color: #dddddd;
+    }
     &.top {
       width: 0;
       height: 1px;
       top: 0;
       left: 0;
+      @media screen and (max-width: 1023px) {
+        width: 80%;
+      }
     }
     &.right {
       width: 1px;
       height: 0;
       right: 0;
       top: 0;
+      @media screen and (max-width: 1023px) {
+        height: 80%;
+      }
     }
     &.bottom {
       height: 1px;
       width: 0;
       right: 0;
       bottom: 0;
+      @media screen and (max-width: 1023px) {
+        width: 80%;
+      }
     }
     &.left {
       width: 1px;
       height: 0;
       left: 0;
       bottom: 0;
+      @media screen and (max-width: 1023px) {
+        height: 80%;
+      }
     }
   }
 }
