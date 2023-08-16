@@ -85,7 +85,6 @@ export default {
     @media screen and (max-width: 1023px) {
       font-size: 0.26rem;
       font-weight: 500;
-      margin-bottom: 0.1rem;
       font-size: 0.22rem;
       line-height: 0.28rem;
       font-weight: 500;

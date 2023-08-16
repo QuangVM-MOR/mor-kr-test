@@ -21,6 +21,7 @@ export default {};
   gap: 0.6rem;
   & img.qr {
     width: 1.8rem;
+    height: 1.8rem;
   }
   & img.vt {
     width: 0.81rem;

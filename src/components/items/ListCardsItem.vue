@@ -57,7 +57,7 @@ export default {
     width: 576px;
     @media screen and (max-width: 1023px) {
       width: calc(100% - 16px);
-      height: 4rem;
+      height: 3rem;
     }
   }
   &__content {
