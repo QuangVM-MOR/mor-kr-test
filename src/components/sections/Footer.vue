@@ -41,8 +41,13 @@
       </div>
     </div>
     <div class="footer__copyright">
-      Copyright ©️2020 www.chan3d.com 鄂ICP备2020022689号-2
-      武汉善为信息科技有限公司版权所有
+      <template v-if="view.isDesktop">
+        Copyright ©️2020 www.chan3d.com 鄂ICP备2020022689号-2
+        武汉善为信息科技有限公司版权所有
+      </template>
+      <template v-else>
+        Copyright ©️2020 www.chan3d.com 鄂ICP备2020022689号-2
+      </template>
     </div>
   </div>
 </template>
@@ -74,7 +79,11 @@ export default {
   }),
   computed: {
     view() {
-      return [this.isDesktop, this.isTablet, this.isMobile];
+      return {
+        isDesktop: this.isDesktop,
+        isTablet: this.isTablet,
+        isMobile: this.isMobile,
+      };
     },
   },
   watch: {

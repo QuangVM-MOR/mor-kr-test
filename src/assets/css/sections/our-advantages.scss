@@ -5,17 +5,31 @@
     font-size: 24px;
     text-align: center;
     margin-bottom: 6px;
+    @media screen and (max-width: 1023px) {
+      flex-wrap: wrap;
+      row-gap: 40px;
+      font-weight: bold;
+      font-size: 0.4rem;
+    }
   }
   &__description {
     text-align: center;
     color: #666666;
     font-size: 16px;
     margin-bottom: 44px;
+    @media screen and (max-width: 1023px) {
+      font-size: 0.26rem;
+      font-weight: 500;
+    }
   }
   &__list {
     display: flex;
     justify-content: space-between;
     opacity: 0;
     transform: translateY(80px);
+    @media screen and (max-width: 1023px) {
+      flex-wrap: wrap;
+      row-gap: 40px;
+    }
   }
 }

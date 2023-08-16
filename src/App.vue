@@ -2,13 +2,13 @@
   <div>
     <LuncherButton />
     <Header />
-    <VideoMedia />
-    <FreeProduct />
-    <ShowCase />
+    <!-- <VideoMedia /> -->
+    <!-- <FreeProduct /> -->
+    <!-- <ShowCase /> -->
     <WhoAreWe />
     <OurAdvantages />
     <Card3D />
-    <VideoTutorials v-if="useVideoTutorials" />
+    <VideoTutorials />
     <Footer />
   </div>
 </template>
@@ -39,31 +39,28 @@ export default {
     LuncherButton,
   },
   mounted() {
-    this.toggleAnimation();
+    const elements = document.getElementsByClassName("aos");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const element = entry.target;
+        const classAnimation = element.getAttribute("data-aos");
+        const hasToggleAos = element.classList.contains("aos-toggle");
+        if (entry.isIntersecting) {
+          element.classList.add(classAnimation);
+        } else if (!entry.isIntersecting && hasToggleAos) {
+          element.classList.remove(classAnimation);
+        }
+      });
+    });
+    Array.from(elements).forEach((element) => {
+      observer.observe(element);
+    });
   },
   computed: {
-    useVideoTutorials() {
-      return this.isDesktop;
-    },
-  },
-  methods: {
-    toggleAnimation() {
-      const elements = document.getElementsByClassName("aos");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          const element = entry.target;
-          const classAnimation = element.getAttribute("data-aos");
-          const hasToggleAos = element.classList.contains("aos-toggle");
-          if (entry.isIntersecting) {
-            element.classList.add(classAnimation);
-          } else if (!entry.isIntersecting && hasToggleAos) {
-            element.classList.remove(classAnimation);
-          }
-        });
-      });
-      Array.from(elements).forEach((element) => {
-        observer.observe(element);
-      });
+    view() {
+      return {
+        isDesktop: this.isDesktop,
+      };
     },
   },
 };
