@@ -30,9 +30,10 @@ export default {
 
 <style lang="scss" scoped>
 .root-list-cards-item {
-  &:hover .list-cards-item {
-    transform: scale(1.1);
-  }
+  transition: 0.8s;
+}
+.root-list-cards-item:hover {
+  transform: scale(1.1);
 }
 .list-cards-item {
   transition: 0.5s;

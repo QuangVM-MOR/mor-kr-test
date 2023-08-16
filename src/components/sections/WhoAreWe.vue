@@ -1,6 +1,6 @@
 <template>
   <div class="who-are-we">
-    <div class="container">
+    <div class="container hidden">
       <h2 class="who-are-we__title">我们是谁</h2>
       <p class="who-are-we__description">无需编程交付一流纯三维空间设计</p>
       <div class="who-are-we__content">
