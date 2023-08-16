@@ -6,8 +6,6 @@ import poster5 from "../assets/images/playlistitem-poster5.jpg";
 import shareSvg from "../assets/images/svg-share.svg";
 import boxSvg from "../assets/images/svg-box.svg";
 import globalSvg from "../assets/images/svg-global.svg";
-import imgShowCase1 from "../assets/images/showcase-1.png";
-import imgShowCase2 from "../assets/images/showcase-2.jpg";
 import ourAdvantage1 from "../assets/images/our-advantage-1.svg";
 import ourAdvantage2 from "../assets/images/our-advantage-2.svg";
 import ourAdvantage3 from "../assets/images/our-advantage-3.svg";
@@ -119,106 +117,126 @@ export const freeProducts = [
 
 export const dataShowCase = [
   {
-    title: "畅享创意",
+    title: "企业展厅",
     animation: "showImg0",
     listShowcase: [
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/d8b49d9bd2613f42cbbf6ba9a0b1c211/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638845674909",
+        caption: "海迈科技云展厅",
       },
       {
-        image: imgShowCase2,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/c29163d1cb4e23925c4103874b10e953/cover.png?x-oss-process=image%2Fresize%2Cl_512&t=1638857452419",
+        caption: "国家生态环境科技成果转化综合服务平台展厅",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/4c9c339049f081cb24d7b7a3e7a95ad9/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638846903991",
+        caption: "内蒙河山大观超低能耗展厅",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/6fd1acef201f7adfaf914a9fe6a0223f/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638849238841",
+        caption: "中国煤科信息公司云展厅",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1n3UcojTSzQQcHOxWmZdvCk4Vr6/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638857452420",
+        caption: "创维展台",
       },
     ],
   },
   {
-    title: "畅享创意",
+    title: "数字史馆",
     animation: "showImg1",
     listShowcase: [
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/874f7e7b3b1a30c5e76d1fe24db86993/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638857452419",
+        caption: "延边老区革命馆",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/865ee277cdd04acba18daabbaace3d1f/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638857452419",
+        caption: "纪录小康 云南征程",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/5d2bf08096f53d57867fc7dc8e20995b/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638857452419",
+        caption: "肇庆市庆祝中国共产党成立100周年——“3个100”红色党史网上展馆",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1qBoT3meedkko1VADOCltquptNu/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638860218258",
+        caption: "建党100周年",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/022ce5e295ebe4557ebbb6a278e9ab9b/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638860780247",
+        caption: "回顾党的长征历程，感怀党的百年之恩",
       },
     ],
   },
   {
-    title: "畅享创意",
+    title: "艺术画展",
     animation: "showImg2",
     listShowcase: [
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1wMvJhNuJ9O14Jfo2SQb02IbETj/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638860780248",
+        caption: "君子之风马少君个人画展",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1sHVsQ8DY5HFbHtySsvKizkisez/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638861267545",
+        caption: "近思艺廊：赵伯辉春日花语油画个展",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1pCLyFDnyVy3uAUEibDJI03cmuo/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638861550469",
+        caption: "寻梦艺源|贾越个人画展",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/093ef26df96db0ecc1a37f1ce984ab93/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638861753401",
+        caption: "浙江交通集团",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/art20201117/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638864965487",
+        caption: "艺术展",
       },
     ],
   },
   {
-    title: "畅享创意",
+    title: "党建军史",
     animation: "showImg3",
     listShowcase: [
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/022ce5e295ebe4557ebbb6a278e9ab9b/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638845177443",
+        caption: "延边老区革命馆",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1znZyZEXiWdVBujHev8YuLk43A5/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638861188930",
+        caption: "纪录小康 云南征程",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1uL6P8Bh6VXBdyQpj9UeGN9Vika/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638861267544",
+        caption: "肇庆市庆祝中国共产党成立100周年——“3个100”红色党史网上展馆",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/d099cc072b3e6efd7c0f36a1754d0796/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638865671643",
+        caption: "建党100周年",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1qbOABXWEKFDjA66WJjOHKra6lG/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638865671644",
+        caption: "回顾党的长征历程，感怀党的百年之恩",
       },
     ],
   },
@@ -227,28 +245,34 @@ export const dataShowCase = [
     animation: "showImg4",
     listShowcase: [
       {
-        image: imgShowCase1,
+        image:
+          "https://cloud.chan3d.com/scenes/1nvHgyNlo7x33T9HFEOryur8T0t/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638860780248",
         caption: "森林狂想曲",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1rZTbmbeqYyKVNUu08BwRNTn5LR/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638861267545",
+        caption: "时光浸润的艺术角落——上世纪广告插画展",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/00d5ec08d692405eae1cd97060ee5110/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638861550469",
+        caption: "”映彩“广彩文化品牌推广设计",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1purrnymO5ZpnafVUHjzl9cBei2/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638861550469",
+        caption: "On The Way主题线上摄影展",
       },
       {
-        image: imgShowCase1,
-        caption: "森林狂想曲",
+        image:
+          "https://cloud.chan3d.com/scenes/1p8qF1RgyPnZwI2HwxTmheohsGt/cover.jpg?x-oss-process=image%2Fresize%2Cl_512&t=1638864965487",
+        caption: "艺术与灵感",
       },
     ],
   },
 ];
+
 export const listAdvantages = [
   {
     id: 1,

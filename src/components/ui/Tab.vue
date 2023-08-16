@@ -51,6 +51,10 @@ export default {
   methods: {
     setTab(index) {
       this.$emit("onSetActiveTab", index);
+      if (!!this.timeOut) {
+        clearInterval(this.timeOut);
+        this.timeOut = setInterval(this.nextTab, this.timeAutoNextTab);
+      }
     },
     nextTab() {
       const nextTab =
