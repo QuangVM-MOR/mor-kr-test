@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LuncherButton/>
+    <LuncherButton />
     <Header />
     <VideoMedia />
     <FreeProduct />
@@ -8,7 +8,7 @@
     <WhoAreWe />
     <OurAdvantages />
     <Card3D />
-    <VideoTutorials />
+    <VideoTutorials v-if="useVideoTutorials" />
     <Footer />
   </div>
 </template>
@@ -23,7 +23,9 @@ import ShowCase from "./components/sections/ShowCase.vue";
 import OurAdvantages from "./components/sections/OurAdvantages.vue";
 import WhoAreWe from "./components/sections/WhoAreWe.vue";
 import LuncherButton from "./components/ui/LuncherButton.vue";
+import breakpoint from "./mixins/breakpoint";
 export default {
+  mixins: [breakpoint],
   components: {
     Header,
     VideoMedia,
@@ -37,22 +39,32 @@ export default {
     LuncherButton,
   },
   mounted() {
-    const elements = document.getElementsByClassName("aos");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const element = entry.target;
-        const classAnimation = element.getAttribute("data-aos");
-        const hasToggleAos = element.classList.contains("aos-toggle");
-        if (entry.isIntersecting) {
-          element.classList.add(classAnimation);
-        } else if (!entry.isIntersecting && hasToggleAos) {
-          element.classList.remove(classAnimation);
-        }
+    this.toggleAnimation();
+  },
+  computed: {
+    useVideoTutorials() {
+      return this.isDesktop;
+    },
+  },
+  methods: {
+    toggleAnimation() {
+      const elements = document.getElementsByClassName("aos");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const element = entry.target;
+          const classAnimation = element.getAttribute("data-aos");
+          const hasToggleAos = element.classList.contains("aos-toggle");
+          if (entry.isIntersecting) {
+            element.classList.add(classAnimation);
+          } else if (!entry.isIntersecting && hasToggleAos) {
+            element.classList.remove(classAnimation);
+          }
+        });
       });
-    });
-    Array.from(elements).forEach((element) => {
-      observer.observe(element);
-    });
+      Array.from(elements).forEach((element) => {
+        observer.observe(element);
+      });
+    },
   },
 };
 </script>

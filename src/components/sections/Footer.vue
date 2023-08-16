@@ -50,91 +50,12 @@
 import guest from "../../assets/images/guest.jpg";
 import guest2 from "../../assets/images/guest2.jpg";
 import kaipiao from "../../assets/images/kaipiao.jpg";
+import breakpoint from "../../mixins/breakpoint";
 
 export default {
+  mixins: [breakpoint],
   data: () => ({
-    mainFooter: [
-      {
-        id: 1,
-        name: "关于善为",
-        children: [
-          {
-            id: 1,
-            name: "善为介绍",
-            type: "text",
-          },
-          {
-            id: 2,
-            name: "应用案例",
-            type: "text",
-          },
-          {
-            id: 3,
-            name: "知乎专栏",
-            type: "text",
-          },
-          {
-            id: 4,
-            name: "平台公约",
-            type: "text",
-          },
-        ],
-      },
-      {
-        id: 2,
-        name: "帮助中心",
-        children: [
-          {
-            id: 1,
-            name: "入门指南",
-            type: "text",
-          },
-          {
-            id: 2,
-            name: "常见问题",
-            type: "text",
-          },
-          {
-            id: 3,
-            name: "用户手册",
-            type: "text",
-          },
-        ],
-      },
-      {
-        id: 3,
-        name: "技术咨询",
-        children: [
-          {
-            id: 1,
-            type: "image",
-            url: guest,
-          },
-        ],
-      },
-      {
-        id: 4,
-        name: "商务合作咨询",
-        children: [
-          {
-            id: 1,
-            type: "image",
-            url: guest2,
-          },
-        ],
-      },
-      {
-        id: 5,
-        name: "开票咨询",
-        children: [
-          {
-            id: 1,
-            type: "image",
-            url: kaipiao,
-          },
-        ],
-      },
-    ],
+    mainFooter: [],
     contactUs: {
       name: "联系我们",
       company: {
@@ -151,6 +72,102 @@ export default {
       },
     },
   }),
+  computed: {
+    view() {
+      return [this.isDesktop, this.isTablet, this.isMobile];
+    },
+  },
+  watch: {
+    view() {
+      this.mainFooter = [
+        {
+          id: 1,
+          isVisible: true,
+          name: "关于善为",
+          children: [
+            {
+              id: 1,
+              name: "善为介绍",
+              type: "text",
+            },
+            {
+              id: 2,
+              name: "应用案例",
+              type: "text",
+            },
+            {
+              id: 3,
+              name: "知乎专栏",
+              type: "text",
+            },
+            {
+              id: 4,
+              name: "平台公约",
+              type: "text",
+            },
+          ],
+        },
+        {
+          isVisible: true,
+          id: 2,
+          name: "帮助中心",
+          children: [
+            {
+              id: 1,
+              name: "入门指南",
+              type: "text",
+            },
+            {
+              id: 2,
+              name: "常见问题",
+              type: "text",
+            },
+            {
+              id: 3,
+              name: "用户手册",
+              type: "text",
+            },
+          ],
+        },
+        {
+          id: 3,
+          isVisible: this.isDesktop,
+          name: "技术咨询",
+          children: [
+            {
+              id: 1,
+              type: "image",
+              url: guest,
+            },
+          ],
+        },
+        {
+          id: 4,
+          isVisible: this.isDesktop,
+          name: "商务合作咨询",
+          children: [
+            {
+              id: 1,
+              type: "image",
+              url: guest2,
+            },
+          ],
+        },
+        {
+          id: 5,
+          isVisible: this.isDesktop,
+          name: "开票咨询",
+          children: [
+            {
+              id: 1,
+              type: "image",
+              url: kaipiao,
+            },
+          ],
+        },
+      ].filter((item) => item.isVisible);
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
