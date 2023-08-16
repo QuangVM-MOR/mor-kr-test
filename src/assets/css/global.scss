@@ -37,7 +37,8 @@ h6 {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1260px;
+  padding: 0 30px;
   margin: 0 auto;
   @media (max-width: 1023px) {
     padding: 0 0.25rem;
@@ -183,6 +184,9 @@ img {
 }
 [data-aos="flip-left"] {
   transform: perspective(2500px) rotateY(-100deg);
+  @media (max-width: 1023px) {
+    transform: perspective(2500px) rotateY(0);
+  }
 }
 .flip-left {
   transform: perspective(2500px) rotateY(0);

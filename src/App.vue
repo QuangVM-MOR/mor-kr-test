@@ -2,8 +2,8 @@
   <div>
     <LuncherButton />
     <Header />
-    <VideoMedia v-if="useDesktop" />
-    <VideoMediaMobile v-if="!useDesktop" />
+    <VideoMedia v-if="isDesktop" />
+    <VideoMediaMobile v-if="!isDesktop" />
     <FreeProduct />
     <ShowCase />
     <WhoAreWe />
@@ -59,11 +59,6 @@ export default {
     Array.from(elements).forEach((element) => {
       observer.observe(element);
     });
-  },
-  computed: {
-    useDesktop() {
-      return this.isDesktop;
-    },
   },
   methods: {
     toggleAnimation() {

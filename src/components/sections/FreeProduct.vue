@@ -1,7 +1,7 @@
 <template>
   <div class="free-product">
     <div class="container">
-      <div class="wrap">
+      <div class="wrap" v-if="isDesktop">
         <CardProduct
           v-for="(product, index) in productsList"
           :key="index"
@@ -16,9 +16,11 @@
   </div>
 </template>
 <script>
+import breakpointMixin from "../../mixins/breakpoint";
 import { freeProducts } from "../../_mock_";
 import CardProduct from "../cards/CardProduct.vue";
 export default {
+  mixins: [breakpointMixin],
   components: {
     CardProduct,
   },
