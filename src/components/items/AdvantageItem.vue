@@ -36,6 +36,9 @@ export default {
     width: calc(50% - 20px);
     gap: 0.4rem;
   }
+  @media screen and (max-width: 767px) {
+    gap: 0.3rem;
+  }
   &:hover {
     & .border.top,
     & .border.bottom {
@@ -57,12 +60,18 @@ export default {
     @media screen and (max-width: 1023px) {
       width: 0.56rem;
     }
+    @media screen and (max-width: 754px) {
+      width: 0.44rem;
+    }
   }
   & .name {
     @media screen and (max-width: 1023px) {
       font-size: 0.26rem;
       font-weight: 500;
       margin-bottom: 0.1rem;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 0.2rem;
     }
     font-size: 16px;
     position: relative;
@@ -88,6 +97,9 @@ export default {
       font-size: 0.22rem;
       line-height: 0.28rem;
       font-weight: 500;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 0.2rem;
     }
   }
   .border {

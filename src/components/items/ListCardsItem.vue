@@ -48,6 +48,9 @@ export default {
   @media screen and (max-width: 1023px) {
     flex-direction: column-reverse;
     padding-bottom: 0.8rem;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 0.6rem;
+    }
   }
   &.reverse {
     flex-direction: row-reverse;
@@ -58,6 +61,9 @@ export default {
     @media screen and (max-width: 1023px) {
       width: calc(100% - 16px);
       height: 3rem;
+    }
+    @media screen and (max-width: 767px) {
+      height: 2rem;
     }
   }
   &__content {
@@ -75,6 +81,9 @@ export default {
         margin-bottom: 0.25rem;
         margin-top: 0.3rem;
       }
+      @media screen and (max-width: 767px) {
+        font-size: 0.3rem;
+      }
     }
     & .description {
       line-height: 24px;
@@ -85,6 +94,9 @@ export default {
         margin: 0.25rem 0.25rem 0 0.25rem;
         min-height: 1.1rem;
         line-height: 44px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 0.2rem;
       }
     }
   }
