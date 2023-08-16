@@ -39,6 +39,9 @@ export default {
   @media screen and (max-width: 767px) {
     gap: 0.3rem;
   }
+  @media screen and (max-width: 599px) {
+    width: 100%;
+  }
   &:hover {
     & .border.top,
     & .border.bottom {
