@@ -36,21 +36,21 @@ h6 {
 }
 html {
   font-size: 100px;
-  @media (max-width: 1200px) {
-    font-size: 12vw;
+  @media (max-width: 1023px) {
+    font-size: 12vh;
   }
 }
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  @media (max-width: 1200px) {
+  @media (max-width: 1023px) {
     padding: 0 0.25rem;
   }
 }
 .container.hidden {
   overflow: hidden;
-  @media (max-width: 1200px) {
+  @media (max-width: 1023px) {
     overflow: unset;
   }
 }
@@ -74,6 +74,18 @@ img {
   vertical-align: middle;
   width: 100%;
 }
+.d-hidden {
+  display: none !important;
+}
+@media (max-width: 1023px) {
+  .m-hidden {
+    display: none !important;
+  }
+  .d-hidden {
+    display: block !important;
+  }
+}
+
 .scrollbar {
   &::-webkit-scrollbar {
     width: 4px;
