@@ -2,9 +2,9 @@
   <div>
     <LuncherButton />
     <Header />
-    <!-- <VideoMedia /> -->
-    <!-- <FreeProduct /> -->
-    <!-- <ShowCase /> -->
+    <VideoMedia />
+    <FreeProduct />
+    <ShowCase />
     <WhoAreWe />
     <OurAdvantages />
     <Card3D />
