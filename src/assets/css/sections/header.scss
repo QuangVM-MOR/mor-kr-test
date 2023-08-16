@@ -2,8 +2,7 @@
   position: fixed;
   z-index: 999;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100vw;
   height: 70px;
   display: flex;
   backdrop-filter: blur(20px);
@@ -12,12 +11,39 @@
     color: var(--color-gray-3);
   }
   background: rgba(255, 255, 255, 0.95);
+  @media (max-width: 1023px) {
+    height: 1.3rem;
+  }
+  .un-login {
+    margin-left: 0.8rem;
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #0f7bff;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+    @media (max-width: 1023px) {
+      display: flex !important;
+    }
+  }
+  .icon-more {
+    width: 0.38rem;
+    height: 0.31rem;
+    cursor: pointer;
+  }
 }
 .container {
   padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1023px) {
+    padding-left: 0.47rem;
+    padding-right: 0.3rem;
+  }
 }
 .logo-nav {
   display: flex;
@@ -32,6 +58,10 @@
     font-size: 20px;
     color: var(--color-blue);
     font-weight: bold;
+    @media (max-width: 1023px) {
+      font-size: 0.32rem;
+      margin-left: 0.1rem;
+    }
   }
 }
 

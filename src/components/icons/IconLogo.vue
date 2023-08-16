@@ -19,5 +19,9 @@
   color: #0f7bff;
   width: 36px;
   height: 36px;
+   @media (max-width:1024px) {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
 }
 </style>
