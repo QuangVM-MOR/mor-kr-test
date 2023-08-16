@@ -39,6 +39,9 @@ h6 {
   max-width: 1200px;
   margin: 0 auto;
 }
+.container.hidden {
+  overflow: hidden;
+}
 a {
   text-decoration: none;
   color: inherit;
