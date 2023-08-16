@@ -1,9 +1,14 @@
 <template>
-  <div :class="['list-cards-item', isReverse && 'reverse']">
-    <img :src="cardItem.thumbnail" alt="card-thumbnail" />
-    <div class="list-cards-item__content">
-      <div class="name">{{ cardItem.name }}</div>
-      <div class="description">{{ cardItem.description }}</div>
+  <div class="root-list-cards-item">
+    <div
+      :class="['list-cards-item aos aos-toggle', isReverse && 'reverse']"
+      data-aos="reset-transform"
+    >
+      <img :src="cardItem.thumbnail" alt="card-thumbnail" />
+      <div class="list-cards-item__content">
+        <div class="name">{{ cardItem.name }}</div>
+        <div class="description">{{ cardItem.description }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -24,12 +29,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.root-list-cards-item {
+  &:hover .list-cards-item {
+    transform: scale(1.1);
+  }
+}
 .list-cards-item {
+  transition: 0.5s;
   display: flex;
   align-items: center;
   gap: 38px;
+  transform: translateX(-80px);
+  opacity: 0;
   &.reverse {
     flex-direction: row-reverse;
+    transform: translateX(80px);
   }
   & img {
     width: 576px;

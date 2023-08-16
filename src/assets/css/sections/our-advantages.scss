@@ -15,5 +15,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    opacity: 0;
+    transform: translateY(80px);
   }
 }

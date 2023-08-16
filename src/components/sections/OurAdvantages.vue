@@ -1,11 +1,16 @@
 <template>
   <div class="our-advantages">
     <div class="container">
-      <h2 class="our-advantages__title">我们的优势</h2>
+      <h2 class="our-advantages__title aos aos-toggle" data-aos="flip-left">
+        我们的优势
+      </h2>
       <h3 class="our-advantages__description">
         帮助设计师和策展人快速创建3D互动空间
       </h3>
-      <div class="our-advantages__list">
+      <div
+        class="our-advantages__list aos aos-toggle"
+        data-aos="reset-transform"
+      >
         <AdvantageItem
           v-for="advantageItem in listAdvantages"
           :key="advantageItem.id"
