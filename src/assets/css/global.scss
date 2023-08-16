@@ -165,3 +165,8 @@ img {
 .flip-left {
   transform: perspective(2500px) rotateY(0);
 }
+
+.reset-transform {
+  transform: translateZ(0) !important;
+  opacity: 1 !important;
+}

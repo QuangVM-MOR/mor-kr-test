@@ -1,5 +1,9 @@
 .who-are-we {
   padding: 70px 0px;
+  .main-img {
+    max-width: 550px;
+    transform: translate3d(-100px, 0, 0);
+  }
   &__title {
     font-size: 28px;
     text-align: center;
@@ -14,12 +18,10 @@
   &__content {
     display: flex;
     gap: 70px;
-    & img {
-      max-width: 550px;
-    }
   }
   &__about-us {
     padding-top: 60px;
+    transform: translate3d(100px, 0, 0);
     & .about-us-description {
       text-indent: 32px;
       line-height: 32px;

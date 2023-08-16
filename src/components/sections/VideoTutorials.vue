@@ -1,6 +1,6 @@
 <template>
   <div class="video-tutorials">
-    <h2 class="video-tutorials__title aos" data-aos="test">
+    <h2 class="video-tutorials__title aos aos-toggle" data-aos="flip-left">
       展厅布展视频教程大全
     </h2>
     <div class="video-tutorials__description">新手小白晋级设计达人</div>

@@ -4,8 +4,15 @@
       <h2 class="who-are-we__title">我们是谁</h2>
       <p class="who-are-we__description">无需编程交付一流纯三维空间设计</p>
       <div class="who-are-we__content">
-        <img src="../../assets/images/who-are-we.jpg" />
-        <div class="who-are-we__about-us">
+        <img
+          src="../../assets/images/who-are-we.jpg"
+          class="main-img aos aos-toggle"
+          data-aos="reset-transform"
+        />
+        <div
+          class="who-are-we__about-us aos aos-toggle"
+          data-aos="reset-transform"
+        >
           <h3 class="about-us-description">
             知了云展专业为设计师和展厅从业人士打造一款将设计方案快速在线交付的平台工具，一个赋予三维项目各种交互功能的平台（会议系统、热点系统、材质编辑系统、动画系统）。一个可以在线设计展馆的设计平台（云展、画展类场景直接在线设计、墙体隔断、展台布置、无需其他三维建模软件）。
           </h3>
