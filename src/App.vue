@@ -2,19 +2,21 @@
   <div>
     <LuncherButton />
     <Header />
-    <VideoMedia />
+    <VideoMedia v-if="useDesktop"/>
+    <VideoMediaMobile v-if="!useDesktop"/>
     <FreeProduct />
     <ShowCase />
     <WhoAreWe />
     <OurAdvantages />
     <Card3D />
-    <VideoTutorials v-if="useVideoTutorials" />
+    <VideoTutorials v-if="useDesktop" />
     <Footer />
   </div>
 </template>
 <script>
 import Header from "./components/sections/Header.vue";
 import VideoMedia from "./components/sections/VideoMedia.vue";
+import VideoMediaMobile from "./components/sections/VideoMediaMobile.vue";
 import VideoTutorials from "./components/sections/VideoTutorials.vue";
 import Footer from "./components/sections/Footer.vue";
 import FreeProduct from "./components/sections/FreeProduct.vue";
@@ -23,9 +25,10 @@ import ShowCase from "./components/sections/ShowCase.vue";
 import OurAdvantages from "./components/sections/OurAdvantages.vue";
 import WhoAreWe from "./components/sections/WhoAreWe.vue";
 import LuncherButton from "./components/ui/LuncherButton.vue";
-import breakpoint from "./mixins/breakpoint";
+import breakpointMixin from "./mixins/breakpoint";
+import htmlFontMixin from "./mixins/htmlFont";
 export default {
-  mixins: [breakpoint],
+  mixins: [breakpointMixin,htmlFontMixin],
   components: {
     Header,
     VideoMedia,
@@ -37,12 +40,13 @@ export default {
     OurAdvantages,
     WhoAreWe,
     LuncherButton,
+    VideoMediaMobile,
   },
   mounted() {
     this.toggleAnimation();
   },
   computed: {
-    useVideoTutorials() {
+    useDesktop() {
       return this.isDesktop;
     },
   },
