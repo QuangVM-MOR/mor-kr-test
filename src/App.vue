@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LuncherButton/>
     <Header />
     <VideoMedia />
     <FreeProduct />
@@ -21,6 +22,7 @@ import Card3D from "./components/sections/Card3D.vue";
 import ShowCase from "./components/sections/ShowCase.vue";
 import OurAdvantages from "./components/sections/OurAdvantages.vue";
 import WhoAreWe from "./components/sections/WhoAreWe.vue";
+import LuncherButton from "./components/ui/LuncherButton.vue";
 export default {
   components: {
     Header,
@@ -32,6 +34,7 @@ export default {
     ShowCase,
     OurAdvantages,
     WhoAreWe,
+    LuncherButton,
   },
   mounted() {
     const elements = document.getElementsByClassName("aos");
