@@ -1,7 +1,7 @@
 <template>
   <div class="video-media">
     <PopupVideoVue :closePopup="closePopupVideo" v-if="showPopupVideo" />
-    <div class="filter-video">
+    <div class="video-top">
       <h1 class="title">人人都会用的虚拟场景交付平台</h1>
       <p class="sub-title">2.6版本全新升级</p>
       <FormSignupTop />
@@ -20,8 +20,10 @@
         />
       </div>
     </div>
+    <div class="triangle"></div>
+    <div class="back-video"></div>
     <div class="wrap-video">
-      <div class="triangle"></div>
+      <div class="filter-video"></div>
       <video autoplay loop muted preload="auto" class="center" ref="video">
         <source
           src="https://cloud.chan3d.com/cdn/website/video/lead-30_1.mp4"

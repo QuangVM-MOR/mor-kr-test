@@ -8,7 +8,7 @@
     <ShowCase />
     <WhoAreWe />
     <OurAdvantages />
-    <Card3D />
+    <!-- <Card3D /> -->
     <VideoTutorials />
     <Footer />
   </div>

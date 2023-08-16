@@ -1,7 +1,7 @@
 <template>
   <div class="free-product">
     <div class="container">
-      <div class="wrap">
+      <div class="wrap m-hidden">
         <CardProduct
           v-for="(product, index) in productsList"
           :key="index"
