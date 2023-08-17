@@ -8,6 +8,7 @@ export default {
       const width = document.documentElement.clientWidth;
       const height = document.documentElement.clientHeight;
       const htmlElement = document.getElementsByTagName("html")[0];
+      const bodyElement = document.getElementsByTagName("body")[0];
       const isLandScape = height < width;
       const e = navigator.userAgent;
       let device = {
@@ -25,6 +26,7 @@ export default {
       if (device.iPad) {
         htmlElement.style.fontSize = isLandScape ? "10vh" : "10vw";
       } else if (device.any) {
+        bodyElement.classList.add("mobile");
         htmlElement.style.fontSize = isLandScape ? "12vh" : "12vw";
       } else {
         let scale = 1;

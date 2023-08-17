@@ -75,5 +75,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import url("../../assets/css/components/ui/Input.scss");
+@import url("../../assets/css/components/ui/input.scss");
 </style>

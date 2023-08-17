@@ -41,6 +41,11 @@ import geoDes22 from "../assets/images/geo-des-22.webp";
 import geoDes23 from "../assets/images/geo-des-23.webp";
 import geoDes24 from "../assets/images/geo-des-24.webp";
 import geoDes25 from "../assets/images/geo-des-25.webp";
+import iconPhone from "../assets/images/ico-phone.png";
+import iconPhoneCheck from "../assets/images/ico-phone-check.png";
+import iconLock from "../assets/images/ico-lock.png";
+import iconOpenEye from "../assets/images/open-eye.svg";
+import iconCloseEye from "../assets/images/close-eye.svg";
 
 export const videoTutorials = [
   {
@@ -308,3 +313,11 @@ export const listAdvantages = [
     icon: ourAdvantage4,
   },
 ];
+
+export const iconInputModal = {
+  iconOpenEye,
+  iconCloseEye,
+  iconLock,
+  iconPhone,
+  iconPhoneCheck,
+};
