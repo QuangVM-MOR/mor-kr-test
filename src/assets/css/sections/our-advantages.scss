@@ -1,6 +1,9 @@
 .our-advantages {
   background-color: #f5f6f9;
   padding: 70px 0;
+  @media screen and (max-width: 1023px) {
+    padding: 40px 0;
+  }
   &__title {
     font-size: 24px;
     text-align: center;
@@ -11,9 +14,6 @@
       font-weight: bold;
       font-size: 0.4rem;
     }
-    @media screen and (max-width: 767px) {
-      font-size: 0.3rem;
-    }
   }
   &__description {
     text-align: center;
@@ -23,9 +23,6 @@
     @media screen and (max-width: 1023px) {
       font-size: 0.26rem;
       font-weight: 500;
-    }
-    @media screen and (max-width: 767px) {
-      font-size: 0.2rem;
     }
   }
   &__list {

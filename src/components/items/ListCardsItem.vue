@@ -60,10 +60,7 @@ export default {
     width: 576px;
     @media screen and (max-width: 1023px) {
       width: calc(100% - 16px);
-      height: 3rem;
-    }
-    @media screen and (max-width: 767px) {
-      height: 2rem;
+      height: 4rem;
     }
   }
   &__content {
@@ -97,6 +94,7 @@ export default {
       }
       @media screen and (max-width: 767px) {
         font-size: 0.2rem;
+        line-height: 24px;
       }
     }
   }

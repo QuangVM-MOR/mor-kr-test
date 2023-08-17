@@ -63,20 +63,14 @@ export default {
   & img {
     width: 36px;
     @media screen and (max-width: 1023px) {
-      width: 0.56rem;
-    }
-    @media screen and (max-width: 754px) {
-      width: 0.44rem;
+      width: 0.6rem;
     }
   }
   & .name {
     @media screen and (max-width: 1023px) {
-      font-size: 0.26rem;
+      font-size: 0.3rem;
       font-weight: 500;
       margin-bottom: 0.1rem;
-    }
-    @media screen and (max-width: 767px) {
-      font-size: 0.2rem;
     }
     font-size: 16px;
     position: relative;
@@ -99,12 +93,8 @@ export default {
     @media screen and (max-width: 1023px) {
       font-size: 0.26rem;
       font-weight: 500;
-      font-size: 0.22rem;
-      line-height: 0.28rem;
+      line-height: 0.4rem;
       font-weight: 500;
-    }
-    @media screen and (max-width: 767px) {
-      font-size: 0.2rem;
     }
   }
   .border {
