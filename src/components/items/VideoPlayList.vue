@@ -47,7 +47,7 @@ export default {
 <style lang="scss" scoped>
 .video-playlist {
   padding: 20px 0px 0px 30px;
-  max-width: 350px;
+  width: 350px;
   background-color: #ffffff;
   &__list {
     display: flex;

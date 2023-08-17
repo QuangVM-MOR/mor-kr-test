@@ -35,7 +35,7 @@ export default {
   @media screen and (max-width: 1023px) {
     width: calc(50% - 20px);
     gap: 0.4rem;
-  }
+  } 
   @media screen and (max-width: 767px) {
     gap: 0.3rem;
   }

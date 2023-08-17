@@ -55,6 +55,7 @@ export default {
   }
   & .name {
     font-size: 16px;
+    width: calc(100% - 144px);
     &.active {
       color: #0f7bff;
     }

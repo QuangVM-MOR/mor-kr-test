@@ -85,10 +85,8 @@ export default {
         isMobile: this.isMobile,
       };
     },
-  },
-  watch: {
-    view() {
-      this.mainFooter = [
+    mainFooter() {
+      return (this.mainFooter = [
         {
           id: 1,
           isVisible: true,
@@ -174,7 +172,7 @@ export default {
             },
           ],
         },
-      ].filter((item) => item.isVisible);
+      ].filter((item) => item.isVisible));
     },
   },
 };
