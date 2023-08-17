@@ -23,7 +23,7 @@
     height: 524px;
     display: flex;
     & .video {
-      width: 930px;
+      width: calc(100% - 350px);
       background-color: #000000;
       position: relative;
       video {

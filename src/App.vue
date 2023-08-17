@@ -8,7 +8,7 @@
     <ShowCase />
     <WhoAreWe />
     <OurAdvantages />
-    <Card3D />
+    <!-- <Card3D /> -->
     <VideoTutorials />
     <Footer />
   </div>
@@ -48,11 +48,8 @@ export default {
       entries.forEach((entry) => {
         const element = entry.target;
         const classAnimation = element.getAttribute("data-aos");
-        const hasToggleAos = element.classList.contains("aos-toggle");
         if (entry.isIntersecting) {
           element.classList.add(classAnimation);
-        } else if (!entry.isIntersecting && hasToggleAos) {
-          element.classList.remove(classAnimation);
         }
       });
     });

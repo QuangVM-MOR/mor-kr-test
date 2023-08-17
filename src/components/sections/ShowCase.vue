@@ -1,31 +1,41 @@
 <template>
   <div class="showcase">
     <div class="container">
-      <ShowImage
-        :listDataImage="listShowCase"
-        @onMouseOver="setAutoNextTab(false)"
-        @onMouseOut="setAutoNextTab(true)"
-      />
-      <div class="bottom">
-        <Tab
-          :listTab="listTab"
+      <template v-if="isDesktop">
+        <ShowImage
+          :listDataImage="listShowCase"
           :activeTab="activeTab"
-          :autoNextTab="autoNextTab"
-          @onSetActiveTab="setActiveTab"
+          @onMouseOver="setAutoNextTab(false)"
+          @onMouseOut="setAutoNextTab(true)"
         />
-        <div class="more">查看更多>></div>
-      </div>
+        <div class="bottom">
+          <Tab
+            :listTab="listTab"
+            :activeTab="activeTab"
+            :autoNextTab="autoNextTab"
+            @onSetActiveTab="setActiveTab"
+          />
+          <div class="more">查看更多>></div>
+        </div>
+      </template>
+      <template v-else>
+        <ShowCaseMobile />
+      </template>
     </div>
   </div>
 </template>
 <script>
+import breakpointMixin from "../../mixins/breakpoint";
 import { dataShowCase } from "../../_mock_";
+import ShowCaseMobile from "../ui/ShowCaseMobile.vue";
 import ShowImage from "../ui/ShowImage.vue";
 import Tab from "../ui/Tab.vue";
 export default {
+  mixins: [breakpointMixin],
   components: {
     Tab,
     ShowImage,
+    ShowCaseMobile,
   },
   data() {
     return {
@@ -38,7 +48,7 @@ export default {
       return dataShowCase.map((item) => item.title);
     },
     listShowCase() {
-      return dataShowCase?.at(this.activeTab);
+      return dataShowCase;
     },
   },
   methods: {

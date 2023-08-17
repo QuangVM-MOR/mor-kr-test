@@ -4,6 +4,7 @@
   grid-template-columns: repeat(6, 1fr); /* 3 cột cho hàng đầu */
   gap: 10px; /* Khoảng cách giữa các ô */
   .wrap-image {
+    display: block;
     height: 250px;
     overflow: hidden;
     position: relative;
