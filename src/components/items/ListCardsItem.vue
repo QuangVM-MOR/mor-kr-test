@@ -93,7 +93,7 @@ export default {
         font-size: 0.26rem;
         text-align: left;
         margin: 0.25rem 0.25rem 0 0.25rem;
-        min-height: 1.1rem;
+        min-height: 1.3rem;
         line-height: 44px;
       }
       @media screen and (max-width: 767px) {
