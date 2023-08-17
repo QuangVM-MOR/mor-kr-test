@@ -52,15 +52,14 @@
   </div>
 </template>
 <script>
-import qrFooterGuest1 from "../../assets/images/qr-footer-guest-1.jpg";
-import qrFooterGuest2 from "../../assets/images/qr-footer-guest-2.jpg";
-import qrFooterGuest3 from "../../assets/images/qr-footer-guest-3.jpg";
+import qrFooterGuest1 from "../../assets/images/qr-footer-guest-1.webp";
+import qrFooterGuest2 from "../../assets/images/qr-footer-guest-2.webp";
+import qrFooterGuest3 from "../../assets/images/qr-footer-guest-3.webp";
 import breakpoint from "../../mixins/breakpoint";
 
 export default {
   mixins: [breakpoint],
   data: () => ({
-    mainFooter: [],
     contactUs: {
       name: "联系我们",
       company: {
@@ -81,12 +80,10 @@ export default {
     view() {
       return {
         isDesktop: this.isDesktop,
-        isTablet: this.isTablet,
-        isMobile: this.isMobile,
       };
     },
     mainFooter() {
-      return (this.mainFooter = [
+      return [
         {
           id: 1,
           isVisible: true,
@@ -172,7 +169,7 @@ export default {
             },
           ],
         },
-      ].filter((item) => item.isVisible));
+      ].filter((item) => item.isVisible);
     },
   },
 };
