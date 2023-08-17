@@ -27,7 +27,7 @@ export default {
 .advantage-item {
   position: relative;
   padding: 46px 32px;
-  width: 290px;
+  width: calc((100% / 4) - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@ export default {
   @media screen and (max-width: 1023px) {
     width: calc(50% - 20px);
     gap: 0.4rem;
-  } 
+  }
   @media screen and (max-width: 767px) {
     gap: 0.3rem;
   }
@@ -43,13 +43,15 @@ export default {
     width: 100%;
   }
   &:hover {
-    & .border.top,
-    & .border.bottom {
-      width: 100%;
-    }
-    & .border.left,
-    & .border.right {
-      height: 100%;
+    @media screen and (min-width: 1024px) {
+      & .border.top,
+      & .border.bottom {
+        width: 100%;
+      }
+      & .border.left,
+      & .border.right {
+        height: 100%;
+      }
     }
     & .name::after {
       width: 100px;

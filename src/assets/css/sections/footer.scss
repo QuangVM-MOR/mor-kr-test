@@ -16,6 +16,10 @@
       gap: 16px;
       justify-content: space-between;
     }
+    @media screen and (max-width: 510px) {
+      flex-direction: column;
+      gap: 32px;
+    }
     &--item {
       display: flex;
       gap: 60px;
@@ -23,7 +27,9 @@
         gap: 16px;
         justify-content: space-between;
       }
-
+      @media screen and (max-width: 510px) {
+        justify-content: unset;
+      }
       & .item__name {
         color: #ffffff;
         font-size: 16px;
@@ -32,6 +38,9 @@
         @media screen and (max-width: 1023px) {
           font-size: 0.22rem;
           margin-bottom: 0.3rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 0.18rem;
         }
       }
       & .item__children {
@@ -42,6 +51,12 @@
         font-size: 14px;
         @media screen and (max-width: 1023px) {
           font-size: 18px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 0.16rem;
+        }
+        @media screen and (max-width: 564px) {
+          font-size: 0.15rem;
         }
         & img {
           width: 80px;
@@ -60,8 +75,11 @@
     @media screen and (max-width: 1023px) {
       font-size: 19px;
       background-color: #333333;
-      padding-bottom: 40px;
       height: unset;
+      padding: 0 15px 40px 15px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 0.16rem;
     }
   }
   & .option {
