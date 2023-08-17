@@ -10,8 +10,8 @@
   ></div>
 </template>
 <script>
-import play from "../../assets/images/play.png";
-import pause from "../../assets/images/pause.png";
+import play from "../../assets/images/play.webp";
+import pause from "../../assets/images/pause.webp";
 
 export default {
   props: {

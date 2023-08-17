@@ -1,6 +1,6 @@
 <template>
   <div class="section-video-media">
-    <img src="../../assets/images/m-bg.png" alt="bg home" />
+    <img src="../../assets/images/m-bg.webp" alt="bg home" />
     <div class="desc center">
       <div class="title">人人都会用的虚拟场景交付平台</div>
       <div class="sub-title">简便 快捷 高性能</div>
