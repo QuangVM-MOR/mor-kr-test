@@ -22,7 +22,6 @@ export default {
       device.any =
         device.Android || device.BlackBerry || device.iOS || device.Windows;
 
-      ole.log("device", device);
       if (device.iPad) {
         htmlElement.style.fontSize = isLandScape ? "10vh" : "10vw";
       } else if (device.any) {

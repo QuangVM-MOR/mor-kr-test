@@ -3,6 +3,7 @@
   gap: 20px;
   justify-content: center;
   .tab {
+    cursor: pointer;
     width: 130px;
     height: 44px;
     background: white;
@@ -11,6 +12,10 @@
     justify-content: center;
     transition: all 1s;
     font-size: 16px;
+    &:hover {
+      color: white;
+      background-color: var(--color-blue);
+    }
     &.active {
       color: white;
       background-color: var(--color-blue);
