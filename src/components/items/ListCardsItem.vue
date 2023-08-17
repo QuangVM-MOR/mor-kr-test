@@ -45,7 +45,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 38px;
-  transform: translateX(-80px);
+  transform: translateX(-40px);
   opacity: 0;
   @media screen and (max-width: 1023px) {
     flex-direction: column-reverse;
@@ -56,16 +56,14 @@ export default {
   }
   &.reverse {
     flex-direction: row-reverse;
-    transform: translateX(80px);
+    transform: translateX(40px);
   }
   & .img-box {
     width: 576px;
     height: 280px;
-    & img {
-      @media screen and (max-width: 1023px) {
-        width: calc(100% - 16px);
-        height: 4rem;
-      }
+    @media screen and (max-width: 1023px) {
+      width: calc(100% - 16px);
+      height: 4rem;
     }
   }
   &__content {

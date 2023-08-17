@@ -1,13 +1,5 @@
 <template>
-  <Swiper
-    :autoplay="{
-      delay: 2500,
-      disableOnInteraction: false,
-    }"
-    :pagination="true"
-    :modules="modules"
-    class="swiper"
-  >
+  <Swiper :pagination="true" :modules="modules" class="swiper">
     <SwiperSlide v-for="cardItem in listCards" :key="cardItem.id">
       <ListCardsItem :cardItem="cardItem" />
     </SwiperSlide>
