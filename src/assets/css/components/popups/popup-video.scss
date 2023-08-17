@@ -2,17 +2,20 @@
   z-index: 2;
   background-color: #fff;
   border: none;
-  margin-top: 30px;
-  width: 100%;
+  margin: 30px auto 0 auto;
   max-width: 1308px;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
   padding: 8px 15px;
   word-wrap: break-word;
   border-radius: 2px;
+  &.conditionalClose {
+    animation: conditionalClose 0.3s forwards ease-in-out;
+  }
+  &.hide {
+    transform: scaleY(0);
+  }
   @media (max-width: 1440px) {
     width: 95%;
   }
@@ -26,5 +29,16 @@
       margin-left: 10px;
       cursor: pointer;
     }
+  }
+}
+
+@keyframes conditionalClose {
+  from {
+    transform: scale(1, 1);
+    margin: 30px auto 0 auto;
+  }
+  to {
+    transform: scale(1, 0);
+    margin: 5px auto;
   }
 }

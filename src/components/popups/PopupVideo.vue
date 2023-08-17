@@ -1,5 +1,5 @@
 <template>
-  <div class="popup-alert-video">
+  <div class="popup-alert-video" ref="popUpAlertVideoRef">
     <IconAlert />
     <div class="content">
       <p>
@@ -7,7 +7,7 @@
         <a href="#">了解详情</a>
       </p>
     </div>
-    <span @click="closePopup">
+    <span @click="handleClosePopup">
       <IconClose />
     </span>
   </div>
@@ -25,6 +25,11 @@ export default {
   components: {
     IconAlert,
     IconClose,
+  },
+  methods: {
+    handleClosePopup() {
+      this.$refs.popUpAlertVideoRef.classList.add("conditionalClose");
+    },
   },
 };
 </script>
