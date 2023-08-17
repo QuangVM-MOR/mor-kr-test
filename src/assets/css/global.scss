@@ -39,9 +39,7 @@ h6 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  @media (max-width: 1023px) {
-    padding: 0 0.25rem;
-  }
+  padding: 0 15px;
 }
 .container.hidden {
   overflow: hidden;
