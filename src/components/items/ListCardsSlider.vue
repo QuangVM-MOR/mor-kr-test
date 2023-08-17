@@ -50,8 +50,8 @@ export default {
       "swiper-pagination-bullet"
     );
     Array.from(paginationBullet).forEach((bulItem) => {
-      bulItem.style.width = ".1rem";
-      bulItem.style.height = ".1rem";
+      bulItem.style.width = ".16rem";
+      bulItem.style.height = ".16rem";
     });
   },
   computed: {
