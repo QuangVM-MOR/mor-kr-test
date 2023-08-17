@@ -5,7 +5,7 @@
       <p class="who-are-we__description">无需编程交付一流纯三维空间设计</p>
       <div class="who-are-we__content">
         <img
-          src="../../assets/images/who-are-we.jpg"
+          src="../../assets/images/who-are-we.webp"
           class="main-img aos aos-toggle"
           data-aos="reset-transform"
         />

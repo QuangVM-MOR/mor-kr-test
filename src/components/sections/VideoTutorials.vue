@@ -10,7 +10,6 @@
           v-if="view.isDesktop"
           class="aos"
           controls
-          autoplay
           ref="videoRef"
           preload="auto"
           :poster="videoActive.poster"
