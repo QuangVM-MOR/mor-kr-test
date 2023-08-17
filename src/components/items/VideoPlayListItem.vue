@@ -1,7 +1,7 @@
 <template>
   <li class="video-playlist-item" @click="handlePlay">
     <div class="video-playlist-item__poster">
-      <img :src="video.thumbnail" :alt="video.name" />
+      <img :src="video.thumbnail" alt="video tutorial" />
       <div class="play-video-container">
         <PlayVideo :isPaused="isPaused" />
       </div>
