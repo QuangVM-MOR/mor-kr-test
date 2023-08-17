@@ -23,6 +23,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-@import url("../../assets/css/components/modals/modal-header.scss");
-</style>
