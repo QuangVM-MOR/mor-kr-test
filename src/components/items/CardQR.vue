@@ -1,6 +1,6 @@
 <template>
   <div class="card-qr">
-    <img class="qr" src="../../assets/images/qr-footer-guest-1.webp" alt="qr" />
+    <img class="qr" src="../../assets/images/qr-footer-guest-1.webp" alt="qr-code" />
     <div class="vt-box">
       <img class="vt" src="../../assets/images/vt.svg" alt="vt" />
       <div class="name">长按识别二维码</div>

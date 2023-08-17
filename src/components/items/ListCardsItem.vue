@@ -4,7 +4,7 @@
       :class="['list-cards-item aos aos-toggle', isReverse && 'reverse']"
       data-aos="reset-transform"
     >
-      <img :src="cardItem.thumbnail" atl="thumbnail" />
+      <img :src="cardItem.thumbnail" :alt="cardItem.name" />
       <div class="list-cards-item__content">
         <div class="name">{{ cardItem.name }}</div>
         <div class="description">{{ cardItem.description }}</div>

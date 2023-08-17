@@ -1,6 +1,6 @@
 <template>
   <div class="advantage-item">
-    <img :src="advantageItem.icon" />
+    <img :src="advantageItem.icon" :alt="advantageItem.name" />
     <p class="name">{{ advantageItem.name }}</p>
     <span class="description">
       {{ advantageItem.description }}
