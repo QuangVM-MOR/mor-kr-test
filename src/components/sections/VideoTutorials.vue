@@ -10,8 +10,10 @@
           v-if="view.isDesktop"
           class="aos"
           controls
+          :autoplay="videoIdPlaying !== -1"
           ref="videoRef"
           preload="auto"
+          volume="0"
           :poster="videoActive.poster"
           :src="videoActive.src"
           @play="handleControlPlay"
@@ -70,15 +72,18 @@ export default {
     },
     playVideo() {
       this.$refs.videoRef.play();
+      this.$refs.videoRef.volume = 0;
     },
     pauseVideo() {
       this.$refs.videoRef.pause();
     },
     handleControlPlay() {
       this.isPaused = false;
+      this.videoIdPlaying = this.videoActive.id;
     },
     handleControlPause() {
       this.isPaused = true;
+      this.videoIdPlaying = -1;
     },
   },
 };
