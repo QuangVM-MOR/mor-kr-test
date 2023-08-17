@@ -2,7 +2,7 @@
   <div class="input-control" :class="[errorMessage.length != '' && 'error']">
     <div class="wrap">
       <div class="wrap-input">
-        <span class="icon"><img :src="icon" /></span>
+        <span class="icon"><img :src="icon" alt="icon"/></span>
         <input
           :placeholder="placeholder"
           :name="name"
