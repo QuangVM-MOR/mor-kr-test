@@ -52,9 +52,9 @@
   </div>
 </template>
 <script>
-import guest from "../../assets/images/guest.jpg";
-import guest2 from "../../assets/images/guest2.jpg";
-import kaipiao from "../../assets/images/kaipiao.jpg";
+import qrFooterGuest1 from "../../assets/images/qr-footer-guest-1.jpg";
+import qrFooterGuest2 from "../../assets/images/qr-footer-guest-2.jpg";
+import qrFooterGuest3 from "../../assets/images/qr-footer-guest-3.jpg";
 import breakpoint from "../../mixins/breakpoint";
 
 export default {
@@ -144,7 +144,7 @@ export default {
             {
               id: 1,
               type: "image",
-              url: guest,
+              url: qrFooterGuest1,
             },
           ],
         },
@@ -156,7 +156,7 @@ export default {
             {
               id: 1,
               type: "image",
-              url: guest2,
+              url: qrFooterGuest2,
             },
           ],
         },
@@ -168,7 +168,7 @@ export default {
             {
               id: 1,
               type: "image",
-              url: kaipiao,
+              url: qrFooterGuest3,
             },
           ],
         },
