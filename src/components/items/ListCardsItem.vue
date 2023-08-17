@@ -4,7 +4,9 @@
       :class="['list-cards-item aos aos-toggle', isReverse && 'reverse']"
       data-aos="reset-transform"
     >
-      <img :src="cardItem.thumbnail" :alt="cardItem.name" />
+      <div class="img-box">
+        <img :src="cardItem.thumbnail" :alt="cardItem.name" />
+      </div>
       <div class="list-cards-item__content">
         <div class="name">{{ cardItem.name }}</div>
         <div class="description">{{ cardItem.description }}</div>
@@ -56,14 +58,18 @@ export default {
     flex-direction: row-reverse;
     transform: translateX(80px);
   }
-  & img {
+  & .img-box {
     width: 576px;
-    @media screen and (max-width: 1023px) {
-      width: calc(100% - 16px);
-      height: 4rem;
+    height: 280px;
+    & img {
+      @media screen and (max-width: 1023px) {
+        width: calc(100% - 16px);
+        height: 4rem;
+      }
     }
   }
   &__content {
+    flex: 1;
     padding-right: 38px;
     @media screen and (max-width: 1023px) {
       padding-right: unset;
