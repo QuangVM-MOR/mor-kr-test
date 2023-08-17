@@ -1,7 +1,10 @@
 .section-video-media {
   position: relative;
   width: 100%;
-  margin-top: 1.3rem;
+  margin-top: 70px;
+  @media (max-width: 1023px) {
+    margin-top: 1.3rem;
+  }
 }
 .section-video-media img {
   width: 100%;
