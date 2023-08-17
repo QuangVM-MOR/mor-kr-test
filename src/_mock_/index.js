@@ -16,6 +16,11 @@ import card3d3 from "../assets/images/card-3d-3.webp";
 import card3d4 from "../assets/images/card-3d-4.webp";
 import card3d5 from "../assets/images/card-3d-5.webp";
 import card3d6 from "../assets/images/card-3d-6.webp";
+import iconPhone from "../assets/images/ico-phone.png";
+import iconPhoneCheck from "../assets/images/ico-phone-check.png";
+import iconLock from "../assets/images/ico-lock.png";
+import iconOpenEye from "../assets/images/open-eye.svg";
+import iconCloseEye from "../assets/images/close-eye.svg";
 
 export const videoTutorials = [
   {
@@ -308,3 +313,11 @@ export const listAdvantages = [
     icon: ourAdvantage4,
   },
 ];
+
+export const iconInputModal = {
+  iconOpenEye,
+  iconCloseEye,
+  iconLock,
+  iconPhone,
+  iconPhoneCheck,
+};

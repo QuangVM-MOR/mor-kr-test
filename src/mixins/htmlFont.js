@@ -7,8 +7,8 @@ export default {
     myEventHandler() {
       const width = document.documentElement.clientWidth;
       const height = document.documentElement.clientHeight;
-      const htmlElement = document.getElementsByTagName("html")[0]
-      const bodyElement = document.getElementsByTagName("body")[0]
+      const htmlElement = document.getElementsByTagName("html")[0];
+      const bodyElement = document.getElementsByTagName("body")[0];
       const isLandScape = height < width;
       const e = navigator.userAgent;
       let device = {
@@ -20,13 +20,13 @@ export default {
           ("MacIntel" === navigator.platform && 1 < navigator.maxTouchPoints),
         Windows: /IEMobile/.test(e),
       };
-      device.any = device.Android || device.BlackBerry || device.iOS || device.Windows;
+      device.any =
+        device.Android || device.BlackBerry || device.iOS || device.Windows;
 
-      console.log('device',device)
       if (device.iPad) {
         htmlElement.style.fontSize = isLandScape ? "10vh" : "10vw";
       } else if (device.any) {
-        bodyElement.classList.add('mobile')
+        bodyElement.classList.add("mobile");
         htmlElement.style.fontSize = isLandScape ? "12vh" : "12vw";
       } else {
         let scale = 1;

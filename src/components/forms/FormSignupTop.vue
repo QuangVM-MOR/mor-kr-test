@@ -114,7 +114,6 @@ export default {
         !this.errorPhone.length &&
         !this.errorVerifyCode.length
       ) {
-        console.log("submit form");
       }
     },
   },

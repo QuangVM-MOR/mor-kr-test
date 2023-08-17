@@ -25,24 +25,34 @@
           >
         </div>
         <div class="register m-hidden">
-          <span class="b">登录</span><span>|</span><span class="b">注册</span>
+          <span class="b" @click="showModalLogin">登录</span><span>|</span
+          ><span class="b" @click="showModalRegister">注册</span>
         </div>
       </div>
-      <div class="un-login d-hidden">登录</div>
+      <div class="un-login d-hidden" @click="showModalLogin">登录</div>
       <div class="icon-more d-hidden" @click="showDrawerMenu = true">
         <img
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAfCAYAAACLSL/LAAAA50lEQVRYR+2WvWoCURBGz7dimrAr+C6GBLRPHsXWzp/CN7BMHsY6ig8jBCOEyO4nkiaQILvVXmRuPTAfZ4Y5V8XCz1RMJJ6ADu2+0mYDrNSbeW0xEty1m+mnu+Fb8K7e3B9AkUKoXxk+L8HWJkFi+dQjZYwFgwR2rDLsnPEqls5y6HdO3FtkbY5Upiq7HA+wV5tBrvWOYE0nE8RuiFhq5+KL4yFnr3zuocRY5iGBA1ta7FzyFhJvuPwh8brAQuJ1Sf2pCyU1RRfEbohYSLzWMEPitTD9U5SwxIuZXxATwWMKH0Vg64rVGVe1hfiehXJGAAAAAElFTkSuQmCC"
           alt="menu"
         />
       </div>
-      <DrawerTopMenu :class="[showDrawerMenu && 'show']" @close="showDrawerMenu = false"/>
+      <DrawerTopMenu
+        :class="[showDrawerMenu && 'show']"
+        @close="showDrawerMenu = false"
+      />
     </div>
+    <ModalHeader
+      :isShow="showModalHeader"
+      @close="showModalHeader = false"
+      :formType="formType"
+    />
   </header>
 </template>
 
 <script>
 import IconLogo from "../icons/IconLogo.vue";
 import IconVip from "../icons/IconVip.vue";
+import ModalHeader from "../modals/ModalHeader.vue";
 import DrawerTopMenu from "../ui/DrawerTopMenu.vue";
 
 export default {
@@ -50,10 +60,13 @@ export default {
     IconLogo,
     IconVip,
     DrawerTopMenu,
+    ModalHeader,
   },
   data() {
     return {
-      showDrawerMenu:false,
+      showModalHeader: false,
+      showDrawerMenu: false,
+      formType: "login",
       menu: [
         {
           id: 1,
@@ -94,6 +107,14 @@ export default {
     };
   },
   methods: {
+    showModalLogin() {
+      this.formType = "login";
+      this.showModalHeader = true;
+    },
+    showModalRegister() {
+      this.formType = "register";
+      this.showModalHeader = true;
+    },
     selectMenu(id) {
       this.menu.forEach((menuItem) => {
         if (menuItem.id == id) menuItem.selected = true;
