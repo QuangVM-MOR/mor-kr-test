@@ -1,25 +1,31 @@
 <template>
-  <div
-    class="show-image"
-    @mouseover="onMouseOverImage"
-    @mouseout="onMouseOutImage"
-  >
+  <div>
     <div
-      class="wrap-image"
-      v-for="(dataImage, index) in listDataImage.listShowcase"
+      class="show-image"
+      @mouseover="onMouseOverImage"
+      @mouseout="onMouseOutImage"
+      v-for="(item, index) in listDataImage"
       :key="index"
-      :class="'pos-' + index"
+      v-show="index == activeTab"
     >
-      <div class="img">
-        <img
-          :src="dataImage.image"
-          :alt="dataImage.title"
-          :style="`animation: ${listDataImage.animation} 1.2s ease 1 forwards`"
-        />
-      </div>
-      <div class="caption">
-        {{ dataImage.caption }}
-      </div>
+      <a
+        class="wrap-image"
+        href="#"
+        v-for="(dataImage, index) in item.listShowcase"
+        :key="index"
+        :class="'pos-' + index"
+      >
+        <div class="img">
+          <img
+            :src="dataImage.image"
+            :alt="dataImage.title"
+            :style="`animation: ${item.animation} 1.2s ease 1 forwards`"
+          />
+        </div>
+        <div class="caption">
+          {{ dataImage.caption }}
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -28,6 +34,9 @@ export default {
   props: {
     listDataImage: {
       type: Object,
+    },
+    activeTab: {
+      type: Number,
     },
   },
   methods: {
