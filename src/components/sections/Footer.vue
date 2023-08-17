@@ -13,7 +13,7 @@
                   <a href="#">{{ child.name }}</a>
                 </template>
                 <template v-else-if="child.type === 'image'">
-                  <img :src="child.url" />
+                  <img :src="child.url" :alt="item.name" />
                 </template>
               </div>
             </div>

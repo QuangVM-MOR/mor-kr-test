@@ -1,6 +1,6 @@
 <template>
   <div class="card-3d">
-    <div class="container hidden">
+    <div class="container">
       <ListCardsSlider :listCards="listCards" />
       <ListCards :listCards="listCards" />
       <template v-if="useSlider">

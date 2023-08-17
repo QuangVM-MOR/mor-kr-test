@@ -219,7 +219,7 @@ export default {
       this.validatePassword();
       if (this.formType == "register") {
         this.validateConfirmPassword();
-        this.validateCode(this.registerCode, "registerCode");
+        this.validateCode(this.registerCode, "errorRegisterCode");
       }
       if (this.formType == "forgotPassword") {
         this.validateCode(this.forgotPasswordCode, "errorForgotCode");

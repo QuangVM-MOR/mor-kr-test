@@ -25,15 +25,7 @@
     <div class="wrap-video">
       <div class="filter-video"></div>
       <video autoplay loop muted preload="auto" class="center" ref="video">
-        <source
-          src="https://cloud.chan3d.com/cdn/website/video/lead-30_1.mp4"
-          type="video/mp4"
-        />
-        <source
-          src="https://cloud.chan3d.com/cdn/website/video/lead-btrate1.mp4"
-          media="all and (max-width: 767px)"
-          type="video/mp4"
-        />
+        <source src="../../assets/mp4/video-banner.mp4" type="video/mp4" />
       </video>
     </div>
     <img

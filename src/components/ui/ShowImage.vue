@@ -17,8 +17,8 @@
       >
         <div class="img">
           <img
+            alt="geo design"
             :src="dataImage.image"
-            :alt="dataImage.title"
             :style="`animation: ${item.animation} 1.2s ease 1 forwards`"
           />
         </div>

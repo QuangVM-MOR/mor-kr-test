@@ -18,7 +18,7 @@
           @pause="handleControlPause"
         />
         <template v-if="isPaused">
-          <div class="play-video-container">
+          <div class="play-video-container" @click="playVideo">
             <PlayVideo :width="74" :height="74" />
           </div>
         </template>

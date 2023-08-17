@@ -43,19 +43,7 @@ export default {
     VideoMediaMobile,
   },
   mounted() {
-    const elements = document.getElementsByClassName("aos");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const element = entry.target;
-        const classAnimation = element.getAttribute("data-aos");
-        if (entry.isIntersecting) {
-          element.classList.add(classAnimation);
-        }
-      });
-    });
-    Array.from(elements).forEach((element) => {
-      observer.observe(element);
-    });
+    this.toggleAnimation();
   },
   methods: {
     toggleAnimation() {
@@ -64,11 +52,8 @@ export default {
         entries.forEach((entry) => {
           const element = entry.target;
           const classAnimation = element.getAttribute("data-aos");
-          const hasToggleAos = element.classList.contains("aos-toggle");
           if (entry.isIntersecting) {
             element.classList.add(classAnimation);
-          } else if (!entry.isIntersecting && hasToggleAos) {
-            element.classList.remove(classAnimation);
           }
         });
       });

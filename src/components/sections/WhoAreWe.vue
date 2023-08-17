@@ -8,6 +8,7 @@
           src="../../assets/images/who-are-we.webp"
           class="main-img aos aos-toggle"
           data-aos="reset-transform"
+          alt="who are we"
         />
         <div
           class="who-are-we__about-us aos aos-toggle"
@@ -18,19 +19,19 @@
           </h3>
           <div class="tick-list">
             <div class="tick-item">
-              <img src="../../assets/images/tick.svg" />
+              <img alt="V" src="../../assets/images/tick.svg" />
               <p>无需任何成本，只需下载客户端，即可免费体验。</p>
             </div>
             <div class="tick-item">
-              <img src="../../assets/images/tick.svg" />
+              <img alt="V" src="../../assets/images/tick.svg" />
               <p>操作简单，易学易用，1天即可承接各种三维场景项目。</p>
             </div>
             <div class="tick-item">
-              <img src="../../assets/images/tick.svg" />
+              <img alt="V" src="../../assets/images/tick.svg" />
               <p>可视化操作、拖拽式配置、专业效果的快速交付平台。</p>
             </div>
             <div class="tick-item">
-              <img src="../../assets/images/tick.svg" />
+              <img alt="V" src="../../assets/images/tick.svg" />
               <p>您的客户资源、您的专业设计、快速交付平台助您成功。</p>
             </div>
           </div>
