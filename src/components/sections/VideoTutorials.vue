@@ -7,6 +7,7 @@
     <div class="video-box">
       <div class="video">
         <video
+          v-if="view.isDesktop"
           class="aos"
           controls
           autoplay
@@ -36,8 +37,10 @@
 import VideoPlayList from "../items/VideoPlayList.vue";
 import PlayVideo from "../icons/PlayVideo.vue";
 import { videoTutorials } from "../../_mock_";
+import breakpoint from "../../mixins/breakpoint";
 
 export default {
+  mixins: [breakpoint],
   components: {
     VideoPlayList,
     PlayVideo,
@@ -48,6 +51,13 @@ export default {
     videoActive: structuredClone(videoTutorials[0]),
     isPaused: true,
   }),
+  computed: {
+    view() {
+      return {
+        isDesktop: this.isDesktop,
+      };
+    },
+  },
   methods: {
     handlePlay({ id, data }) {
       if (this.videoIdPlaying !== id) {
